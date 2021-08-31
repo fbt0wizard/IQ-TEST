@@ -201,11 +201,9 @@ nav {
 
   .flex-container {
     flex-wrap: wrap;
+    height: 43rem;
   }
 
-  .flex-container .img {
-    display: none;
-  }
 
   .flex-container > div {
     margin: 0px 10%;
@@ -215,6 +213,7 @@ nav {
   .flex-content {
     width: 100%;
     margin-top: 2rem;
+
   }
 }
 
@@ -225,6 +224,14 @@ nav {
   }
 
   header {
+    display: none;
+  }
+
+  .flex-container {
+    height: 30rem;
+  }
+
+  .flex-container .img {
     display: none;
   }
 
