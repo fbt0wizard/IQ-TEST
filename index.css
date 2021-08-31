@@ -220,10 +220,11 @@ nav {
 
 
 @media screen and (max-width: 600px) {
-  .my-body {
-    overflow-x: hidden;
-  }
 
+  body {
+    overflow: hidden;
+  }
+  
   header {
     display: none;
   }
