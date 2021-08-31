@@ -11,6 +11,10 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 header {
   background: rgb(51,46,125);
   background: linear-gradient(90deg, rgba(51,46,125,1) 0%, rgba(255,255,255,1) 50%, rgba(19,68,226,1) 100%);
