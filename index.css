@@ -204,6 +204,33 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
+/* Footer  */
+footer {
+  height: 100px;
+  text-align: center;
+}
+.social-icons {
+  margin: 14px;
+}
+.copyright {
+  color: #868686;
+  font-size: 14px;
+}
+.social-icons a {
+  font-size: 35px;
+  margin: 3px;
+}
+#facebook {
+  color: rgb(0, 0, 173);
+}
+#twitter {
+  color: #194fff;
+}
+#linkedin {
+  color: black;
+}
+
+
 @media screen and (max-width: 1115px) {
   .flex-content {
     width: 24rem;
@@ -253,6 +280,7 @@ tr:nth-child(even) {
 
   .chart-container {
     display: grid;
+    padding-top: 2rem;
   }
 
   table {
