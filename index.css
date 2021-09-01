@@ -62,12 +62,14 @@ nav {
 .burger {
   display: none;
   cursor: pointer;
+  border: 3px solid #f1f1f1;
+  margin: 7px 5px 0 0;
 }
 
 .burger div {
   background-color: #d6d6d6;
-  margin: 6px 11px 0 0;
-  width: 28px;
+  margin: 4px 5px;
+  width: 23px;
   height: 3px;
 }
 
@@ -336,7 +338,7 @@ tr:nth-child(even) {
     display: block;
     position: absolute;
     right: 4px;
-    padding: 6px 0;
+    padding: 2px 0;
   }
 
   .nav-active {
