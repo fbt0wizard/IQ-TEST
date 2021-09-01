@@ -203,6 +203,7 @@ table {
 .table-head {
   margin-top: -33px;
   color: #09206b;
+  margin-bottom: -28px;
 }
 
 td, th {
@@ -292,6 +293,7 @@ footer {
   .chart-container {
     display: grid;
     padding-top: 2rem;
+    margin-top: -2rem;
   }
 
   table {
