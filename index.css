@@ -35,6 +35,12 @@ nav {
   justify-content: center;
 }
 
+.active {
+  background-color: #341aeac2;
+  padding: 8px;
+  border-radius: 4px;
+}
+
 .navlinks {
   display: flex;
   justify-content: center;
@@ -122,7 +128,7 @@ nav {
 
 .flex-content h2 {
   color: #d6d6d6;
-  font-size: 34px;
+  font-size: 31px;
   padding-top: 2rem;
 }
 
