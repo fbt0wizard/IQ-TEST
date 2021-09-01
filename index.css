@@ -253,6 +253,10 @@ tr:nth-child(even) {
     display: grid;
   }
 
+  table {
+    margin: 2rem auto;
+  }
+
   .chart-container > div {
     width: 87%;
     margin: 10px auto;
@@ -282,7 +286,7 @@ tr:nth-child(even) {
     overflow-x: hidden;
     position: relative;
   }
-  
+
   header {
     display: none;
   }
