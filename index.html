@@ -1,68 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TECH DOMAIN</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
     <header>
-        <h4 class="logo">
-            TECH <span>DOMAIN</span>
-        </h4>
+      <h4 class="logo">TECH <span>DOMAIN</span></h4>
     </header>
     <nav>
-        <ul class="navlinks" id="navlinks">
-            <li>
-                <a href="#" class="active">Home</a>
-            </li>
-            <li>
-                <a href="#">Trial Test</a>
-            </li>
-            <li>
-                <a href="#">Premium IQ Test</a>
-            </li>
-            <li>
-                <a href="#">World IQ Report</a>
-            </li>
-            <li>
-                <a href="#">Blog</a>
-            </li>
-            <li>
-                <div class="dropdown">
-                    <a class="dropbtn" href="#about">Contact Us</a>
-                    <div class="dropdown-content" id="myDropdown">
-                        <a href="#" style="font-size: 13px;">About Us</a>
-                        <a href="#" style="font-size: 13px">Email Us</a>
-                    </div>
-                </div>
-            </li>
-        </ul>
-        <div class="burger" id="bug">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
+      <ul class="navlinks" id="navlinks">
+        <li>
+          <a href="#" class="active">Home</a>
+        </li>
+        <li>
+          <a href="#">Trial Test</a>
+        </li>
+        <li>
+          <a href="#">Premium IQ Test</a>
+        </li>
+        <li>
+          <a href="#">World IQ Report</a>
+        </li>
+        <li>
+          <a href="#">Blog</a>
+        </li>
+        <li>
+          <div class="dropdown">
+            <a class="dropbtn" href="#about">Contact Us</a>
+            <div class="dropdown-content" id="myDropdown">
+              <a href="#" style="font-size: 13px">About Us</a>
+              <a href="#" style="font-size: 13px">Email Us</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="burger" id="bug">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
     </nav>
 
     <div class="flex-container">
-        <div class="img">
-            <img src="/images/illus.svg" alt="quiz">
-        </div>
-        <div>
-            <div class="flex-content">
-                <h2>Nigeria's leading online <br>IQ test</h2>
-                <p>Get your IQ score today</p>
-                <button>TRY FOR FREE</button>
-                <h4 class="subtext">2,000 people have tested already, what <br>are you waiting for?</h4>
-            </div>
-        </div>  
+      <div class="img">
+        <img src="/images/illus.svg" alt="quiz" />
       </div>
+      <div>
+        <div class="flex-content">
+          <h2>Nigeria's leading online <br />IQ test</h2>
+          <p>Get your IQ score today</p>
+          <button>TRY FOR FREE</button>
+          <h4 class="subtext">
+            2,000 people have tested already, what <br />are you waiting for?
+          </h4>
+        </div>
+      </div>
+    </div>
 
-    
+    <div class="chart-container">
+      <div>
+        <p>
+          <a href="https://en.wikipedia.org/wiki/Intelligence_quotient"
+            >Wikipedia</a
+          >
+          IQ Distribution
+        </p>
+        <img
+          src="/images/1024px-IQ_distribution.svg.png"
+          alt=""
+          class="responsive"
+        />
+      </div>
+      <div>
+        <h4 class="table-head">Score Table</h4>
+
+        <table>
+          <tr>
+            <th>Score</th>
+            <th>Class</th>
+          </tr>
+          <tr>
+            <td>0 - 69</td>
+            <td>Low</td>
+          </tr>
+          <tr>
+            <td>70 - 84</td>
+            <td>Below Average</td>
+          </tr>
+          <tr>
+            <td>84 - 114</td>
+            <td>Average</td>
+          </tr>
+          <tr>
+            <td>115 - 129</td>
+            <td>Above Average</td>
+          </tr>
+          <tr>
+            <td>130 - 144</td>
+            <td>Gifted</td>
+          </tr>
+          <tr>
+            <td>145 - 160</td>
+            <td>Highly Gifted</td>
+          </tr>
+        </table>
+      </div>
+    </div>
 
     <script src="index.js"></script>
-</body>
+  </body>
 </html>

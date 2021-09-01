@@ -92,6 +92,7 @@ nav {
   display: flex;
   justify-content: center;
   background-image: url("/images/main.jpg");
+  background-repeat: no-repeat;
   /* background: linear-gradient(-45deg, #3feccb, #254593, #23a6d5, #5576b7);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite; */
@@ -153,17 +154,52 @@ nav {
   font-weight: normal;
 }
 
+/* Chart Section  */
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+.chart-container {
+  display: flex;
+  justify-content: center;
+  background-color: #f1f1f1;
+  padding: 4rem 0;
+}
+
+.chart-container > div {
+  background-color: #fff;
+  width: 38%;
+  margin: 10px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+/* Table section */
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 69%;
+  font-size: 12px;
+  margin: 0 auto;
+  line-height: 9px
+}
+
+.table-head {
+  margin-top: -33px;
+  color: #09206b;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
 
 @media screen and (max-width: 1115px) {
@@ -211,6 +247,15 @@ nav {
   .navlinks li a {
     margin: 12px;
     font-size: 13px;
+  }
+
+  .chart-container {
+    display: grid;
+  }
+
+  .chart-container > div {
+    width: 87%;
+    margin: 10px auto;
   }
 
   .flex-container {
