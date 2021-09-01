@@ -278,11 +278,11 @@ tr:nth-child(even) {
 
 
 @media screen and (max-width: 600px) {
-
-  body {
-    overflow: hidden;
+  body, html {
+    overflow-x: hidden;
+    position: relative;
   }
-
+  
   header {
     display: none;
   }
