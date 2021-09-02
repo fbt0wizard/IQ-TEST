@@ -15,19 +15,18 @@ body {
 .flex-container {
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
 }
 
 .flex-container > div {
     color: #f1f1f1;
-    width: 90%;
-    margin: 10px;
+    width: 100%;
     text-align: center;
     line-height: 75px;
     font-size: 30px;
     display: flex;
     justify-content: space-around;
     background-color: #09206b;
+    margin-bottom: 1rem;
 }
 
 #time, .progress p {
@@ -48,3 +47,10 @@ body {
     color: #09206b;
     cursor: pointer;
 }
+
+.question-wrapper {
+    text-align: center;
+    margin-top: 2rem;
+    color: rgb(49, 49, 49);
+}
+
