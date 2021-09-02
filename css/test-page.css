@@ -28,7 +28,7 @@ body {
     justify-content: space-around;
 }
 
-#time {
+#time, .progress p {
     font-size: 19px;
     color: blue
 }
