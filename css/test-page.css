@@ -34,3 +34,17 @@ body {
     font-size: 17px;
     color: #dfdfdf;
 }
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.prev button, .next button {
+    padding: 7px 23px;
+    border: 2px solid #09206b;
+    border-radius: 4px;
+    font-size: 15px;
+    color: #09206b;
+    cursor: pointer;
+}
