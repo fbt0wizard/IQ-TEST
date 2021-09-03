@@ -345,6 +345,10 @@ footer {
     height: 49px;
   }
 
+  .flex-content a {
+    padding: 18px 63px;
+  }
+
   .navlinks {
     position: absolute;
     right: 0px;

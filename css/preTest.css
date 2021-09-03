@@ -6,6 +6,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    height: 100vh;
+}
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -117,7 +120,7 @@ footer {
     }
 
     .footer {
-        margin-top: calc(100% - 474.2px);
+        margin-top: calc(100vh - 474.2px);
     }
 
     .copyright {
@@ -138,6 +141,6 @@ footer {
     }
 
     .footer {
-        margin-top: calc(100% - 474.2px);
+        margin-top: calc(100vh - 501.4px);
     }
 }
