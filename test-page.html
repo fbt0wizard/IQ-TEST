@@ -28,6 +28,8 @@
         </div>
     </div>
 
+    <form action="#">
+
     <div class="question-wrapper">
         
         <div class="question">
@@ -37,15 +39,19 @@
         <div class="answer">
             <div class="answer-top">
                 <p >A</p>
-                <img src="/questions/a1.svg" alt="">
+                <input type="radio" id="q1A" name="q1" value="a">
+                <label for="q1A"><img src="/questions/a1.svg" alt=""></label>
                 <p id="answerTop">B</p>
-                <img src="/questions/a2.svg" alt="">
+                <input type="radio" id="q1B" name="q1" value="b">
+                <label for="q1B"><img src="/questions/a2.svg" alt=""></label>
             </div>
             <div class="answer-top">
                 <p>C</p>
-                <img src="/questions/a3.svg" alt="">
+                <input type="radio" id="q1C" name="q1" value="c">
+                <label for="q1C"><img src="/questions/a3.svg" alt=""></label>
                 <p id="answerTop">D</p>
-                <img src="/questions/a4.svg" alt="">
+                <input type="radio" id="q1D" name="q1" value="d">
+                <label for="q1D"><img src="/questions/a4.svg" alt=""></label>
             </div>
         </div>
     </div>
@@ -59,19 +65,24 @@
         <div class="answer">
             <div class="answer-top">
                 <p >A</p>
-                <img src="/questions/2a1.svg" alt="">
+                <input type="radio" id="optionA" name="q2" value="a">
+                <label for="optionA"><img src="/questions/2a1.svg" alt=""></label>   
                 <p id="answerTop">B</p>
-                <img src="/questions/2a2.svg" alt="">
+                <input type="radio" id="optionB" name="q2" value="b">
+                <label for="optionB"><img src="/questions/2a2.svg" alt=""></label>     
             </div>
             <div class="answer-top">
                 <p>C</p>
-                <img src="/questions/2a3.svg" alt="">
-                <p id="answerTop">D</p>
-                <img src="/questions/2a4.svg" alt="">
+                <input type="radio" id="optionC" name="q2" value="c">
+                <label for="optionC"><img src="/questions/2a3.svg" alt=""></label>     
+                <p id="answerTop">D</p>      
+                <input type="radio" id="optionD" name="q2" value="d">
+                <label for="optionD"><img src="/questions/2a4.svg" alt=""></label>        
             </div>
             <div class="answer-top">
-                <p>E</p>
-                <img src="/questions/2a5.svg" alt="">
+                <p id="answerAlone">E</p>
+                <input type="radio" id="optionE" name="q2" value="e">
+                <label for="optionE"><img src="/questions/2a5.svg" alt=""></label>       
             </div>
         </div>
     </div>
@@ -80,6 +91,8 @@
         <p class="label">Submit only when you are through</p>
         <button> SUBMIT</button>
     </div>
+
+</form>
 
 
       <script src="/javascript/test-page.js"></script>

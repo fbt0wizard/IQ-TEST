@@ -84,8 +84,17 @@ body {
     margin-bottom: 5px;
 }
 
+.answer-top input {
+    margin-right: 1px;
+    margin-top: -16px;
+}
+
 #answerTop {
     margin-left: 1rem;
+}
+
+#answerAlone {
+    margin-left: 4px;
 }
 
 .answer-top p {
@@ -99,7 +108,9 @@ body {
 }
 
 .answer-top img:hover {
-    background-color: #fff;
+    background-color: #426cf7;
+    color: #fff;
+    border-radius: 5px;
 }
 
 .action {
