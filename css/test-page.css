@@ -180,5 +180,9 @@ body {
     .special img {
         width: 89px;
     }
+
+    #q4A, #q4B, #q4C, #q4D {
+        margin-top: -32px;
+    }
 }
 
