@@ -66,6 +66,33 @@ body {
     color: #f1f1f1;
 }
 
+/* Footer  */
+footer {
+    height: 100px;
+    text-align: center;
+    background-color: #fff;
+}
+.social-icons {
+    margin: 14px;
+}
+.copyright {
+    color: #868686;
+    font-size: 14px;
+}
+.social-icons a {
+    font-size: 35px;
+    margin: 3px;
+}
+#facebook {
+    color: #4267B2
+}
+#twitter {
+    color: #1da1f2;
+}
+#linkedin {
+    color: black;
+}
+
 @media screen and (max-width: 583px) {
     .first-container h2 {
         font-size: 16px;
