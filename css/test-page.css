@@ -50,7 +50,55 @@ body {
 
 .question-wrapper {
     text-align: center;
-    margin-top: 2rem;
+    margin: 10px;
     color: rgb(49, 49, 49);
+    display: flex;
+    justify-content: center;
 }
+
+.question {
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.answer {
+    display: grid;
+    margin: 25px;
+    border-left: 2px solid #000;
+    padding-left: 1rem;
+}
+
+.answer-top {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.answer-top p {
+    padding-right: 1rem;
+}
+
+.answer-top img {
+    width: 80px;
+}
+
+.action {
+    text-align: center;
+}
+
+.label {
+    font-size: 12px;
+    color: red;
+}
+
+.action button {
+    padding: 18px 100px;
+    font-size: 24px;
+    color: #ddd;
+    background: #d00;
+    border: 2px solid #d00;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 
