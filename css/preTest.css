@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 html {
-    height: 100vh;
+    max-height: 100vh;
 }
 
 body {
@@ -100,10 +100,6 @@ footer {
 }
 
 @media screen and (max-width: 583px) {
-
-    body {
-        min-height: 100%;
-    }
     .first-container h2 {
         font-size: 16px;
     }
@@ -119,7 +115,7 @@ footer {
         border: none;
     }
 
-    .footer {
+    footer {
         margin-top: calc(100vh - 474.2px);
     }
 
@@ -140,7 +136,7 @@ footer {
         font-size: 13px;
     }
 
-    .footer {
+    footer {
         margin-top: calc(100vh - 501.4px);
     }
 }
