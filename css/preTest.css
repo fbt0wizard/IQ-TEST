@@ -71,6 +71,7 @@ footer {
     height: 100px;
     text-align: center;
     background-color: #fff;
+    margin-top: calc(100vh - 553.4px);
 }
 .social-icons {
     margin: 14px;
@@ -106,6 +107,11 @@ footer {
         line-height: 1.7rem;
         width: 97%;
         margin: 0px auto;
+        border: none;
+    }
+
+    .copyright {
+        font-size: 12px;
     }
 }
 
