@@ -68,6 +68,12 @@ body {
     margin-bottom: 1rem;
 }
 
+.answer p {
+    font-size: 14px;
+    color: #606060;
+    margin-bottom: 2rem;
+}
+
 .question img {
     width: 275px;
 }
