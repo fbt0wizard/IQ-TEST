@@ -62,7 +62,7 @@ body {
 }
 
 .question img {
-    width: 300px;
+    width: 275px;
 }
 
 .answer {
@@ -77,8 +77,12 @@ body {
     margin-bottom: 5px;
 }
 
+#answerTop {
+    margin-left: 1rem;
+}
+
 .answer-top p {
-    padding-right: 1rem;
+    padding-right: 10px;
 }
 
 .answer-top img {
