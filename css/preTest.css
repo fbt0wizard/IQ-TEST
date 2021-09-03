@@ -74,7 +74,6 @@ footer {
     background-color: #fff;
     clear: both;
     position: relative;
-    margin-top: calc(100% - 100px);
 }
 .social-icons {
     margin: 14px;
@@ -117,17 +116,28 @@ footer {
         border: none;
     }
 
+    .footer {
+        margin-top: calc(100% - 474.2px);
+    }
+
     .copyright {
         font-size: 12px;
     }
 }
 
 @media screen and (max-width: 410px) {
+    body {
+        min-height: 100%;
+    }
     .first-container p {
         font-size: 10px;
     }
 
     .first-container h2 {
         font-size: 13px;
+    }
+
+    .footer {
+        margin-top: calc(100% - 474.2px);
     }
 }
