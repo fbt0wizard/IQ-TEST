@@ -116,7 +116,7 @@ footer {
     }
 
     footer {
-        margin-top: calc(100vh - 100px);
+        margin-top: calc(100vh - 520px);
     }
 
     .copyright {
