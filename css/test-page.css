@@ -54,11 +54,18 @@ body {
     color: rgb(49, 49, 49);
     display: flex;
     justify-content: center;
+    margin: 3rem;
+    /* background-color: #fff; */
 }
 
 .question {
-    background-color: #f1f1f1;
     text-align: center;
+}
+
+.question p {
+    font-size: 14px;
+    color: #606060;
+    margin-bottom: 1rem;
 }
 
 .question img {
@@ -112,6 +119,10 @@ body {
 @media screen and (max-width: 583px) {
     .question-wrapper {
         display: grid;
+    }
+
+    .question p {
+        font-size: 12px;
     }
 
     .answer {
