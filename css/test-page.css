@@ -94,6 +94,12 @@ body {
 
 .answer-top img {
     width: 80px;
+    cursor: pointer;
+    padding: 0 2px;
+}
+
+.answer-top img:hover {
+    background-color: #fff;
 }
 
 .action {

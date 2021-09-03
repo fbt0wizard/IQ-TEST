@@ -1,0 +1,34 @@
+<svg width="748" height="748" viewBox="0 0 748 748" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1" y="1" width="250" height="250" stroke="black" stroke-width="2"/>
+<rect x="1" y="249" width="250" height="250" stroke="black" stroke-width="2"/>
+<rect x="1" y="497" width="250" height="250" stroke="black" stroke-width="2"/>
+<rect x="249" y="1" width="250" height="250" stroke="black" stroke-width="2"/>
+<rect x="249" y="249" width="250" height="250" stroke="black" stroke-width="2"/>
+<rect x="249" y="497" width="250" height="250" stroke="black" stroke-width="2"/>
+<rect x="497" y="1" width="250" height="250" stroke="black" stroke-width="2"/>
+<rect x="497" y="249" width="250" height="250" stroke="black" stroke-width="2"/>
+<circle cx="126.5" cy="125.5" r="106.5" fill="white" stroke="black" stroke-width="2"/>
+<circle cx="126" cy="126" r="80" fill="black" stroke="black" stroke-width="2"/>
+<circle cx="126.5" cy="125.5" r="55.5" fill="white" stroke="black" stroke-width="2"/>
+<circle cx="373.5" cy="125.5" r="106.5" fill="white" stroke="black" stroke-width="2"/>
+<circle cx="373" cy="126" r="80" fill="white" stroke="black" stroke-width="2"/>
+<circle cx="373.5" cy="125.5" r="55.5" fill="black" stroke="black" stroke-width="2"/>
+<circle cx="621.5" cy="125.5" r="106.5" fill="black" stroke="black" stroke-width="2"/>
+<circle cx="621" cy="126" r="80" fill="white" stroke="black" stroke-width="2"/>
+<circle cx="621.5" cy="125.5" r="55.5" fill="white" stroke="black" stroke-width="2"/>
+<circle cx="126.5" cy="373.5" r="106.5" fill="black" stroke="black" stroke-width="2"/>
+<circle cx="126" cy="374" r="80" fill="white" stroke="black" stroke-width="2"/>
+<circle cx="126.5" cy="373.5" r="55.5" fill="white" stroke="black" stroke-width="2"/>
+<circle cx="374.5" cy="371.5" r="106.5" fill="white" stroke="black" stroke-width="2"/>
+<circle cx="374" cy="372" r="80" fill="white" stroke="black" stroke-width="2"/>
+<circle cx="374.5" cy="371.5" r="55.5" fill="white" stroke="black" stroke-width="2"/>
+<circle cx="622.5" cy="373.5" r="106.5" fill="white" stroke="black" stroke-width="2"/>
+<circle cx="622" cy="374" r="80" fill="black" stroke="black" stroke-width="2"/>
+<circle cx="622.5" cy="373.5" r="55.5" fill="black" stroke="black" stroke-width="2"/>
+<circle cx="126.5" cy="619.5" r="106.5" fill="white" stroke="black" stroke-width="2"/>
+<circle cx="126" cy="620" r="80" fill="white" stroke="black" stroke-width="2"/>
+<circle cx="126.5" cy="619.5" r="55.5" fill="black" stroke="black" stroke-width="2"/>
+<circle cx="374.5" cy="622.5" r="106.5" fill="black" stroke="black" stroke-width="2"/>
+<circle cx="374" cy="623" r="80" fill="black" stroke="black" stroke-width="2"/>
+<circle cx="374.5" cy="622.5" r="55.5" fill="white" stroke="black" stroke-width="2"/>
+</svg>
