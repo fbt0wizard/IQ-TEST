@@ -1,8 +1,8 @@
-<svg width="855" height="863" viewBox="0 0 855 863" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="855" height="862" viewBox="0 0 855 862" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="2" y="3" width="852" height="852" stroke="black" stroke-width="2"/>
 <line x1="214" y1="0.00351286" x2="211" y2="853.998" stroke="black" stroke-width="2"/>
 <line x1="433" y1="4.00351" x2="430" y2="857.998" stroke="black" stroke-width="2"/>
-<line x1="648" y1="8.00351" x2="645" y2="861.998" stroke="black" stroke-width="2"/>
+<line x1="648" y1="3.00351" x2="645" y2="856.998" stroke="black" stroke-width="2"/>
 <line y1="184" x2="853" y2="184" stroke="black" stroke-width="2"/>
 <line y1="412" x2="853" y2="412" stroke="black" stroke-width="2"/>
 <line y1="641" x2="853" y2="641" stroke="black" stroke-width="2"/>
