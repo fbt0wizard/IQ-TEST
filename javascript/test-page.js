@@ -16,8 +16,17 @@ function startTimer(duration, display) {
     }, 1000);
 }
 
+var fiveMinutes = 60 * 1,
+display = document.querySelector('#time');
+
 window.onload = function () {
-    var fiveMinutes = 60 * 6,
-        display = document.querySelector('#time');
+
     startTimer(fiveMinutes, display);
+    console.log(fiveMinutes);
+    setTimeout(stop, 62000);
+
 };
+
+function stop() {
+    alert("time up");
+}
