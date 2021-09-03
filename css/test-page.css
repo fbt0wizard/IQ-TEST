@@ -115,7 +115,11 @@ body {
     }
 
     .question img {
-        width: 200px;
+        width: 160px;
+    }
+
+    .answer-top img {
+        width: 60px;
     }
 }
 
