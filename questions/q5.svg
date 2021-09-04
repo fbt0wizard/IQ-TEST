@@ -1,0 +1,28 @@
+<svg width="540" height="540" viewBox="0 0 540 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1" y="1" width="136" height="136" stroke="black" stroke-width="2"/>
+<rect x="1" y="135" width="136" height="136" stroke="black" stroke-width="2"/>
+<rect x="1" y="269" width="136" height="136" stroke="black" stroke-width="2"/>
+<rect x="1" y="403" width="136" height="136" stroke="black" stroke-width="2"/>
+<rect x="135" y="1" width="136" height="136" stroke="black" stroke-width="2"/>
+<rect x="269" y="1" width="136" height="136" stroke="black" stroke-width="2"/>
+<rect x="403" y="1" width="136" height="136" stroke="black" stroke-width="2"/>
+<rect x="403" y="135" width="136" height="136" stroke="black" stroke-width="2"/>
+<rect x="269" y="135" width="136" height="136" stroke="black" stroke-width="2"/>
+<rect x="135" y="135" width="136" height="136" stroke="black" stroke-width="2"/>
+<rect x="403" y="269" width="136" height="136" stroke="black" stroke-width="2"/>
+<rect x="403" y="403" width="136" height="136" stroke="black" stroke-width="2"/>
+<rect x="269" y="403" width="136" height="136" stroke="black" stroke-width="2"/>
+<circle cx="26" cy="26" r="16.5" stroke="black" stroke-width="3"/>
+<circle cx="165" cy="26" r="16.5" stroke="black" stroke-width="3"/>
+<circle cx="428" cy="428" r="16.5" stroke="black" stroke-width="3"/>
+<circle cx="293" cy="511" r="16.5" stroke="black" stroke-width="3"/>
+<circle cx="26" cy="428" r="16.5" stroke="black" stroke-width="3"/>
+<circle cx="26" cy="376" r="16.5" stroke="black" stroke-width="3"/>
+<circle cx="514" cy="294" r="16.5" stroke="black" stroke-width="3"/>
+<circle cx="514" cy="247" r="16.5" stroke="black" stroke-width="3"/>
+<circle cx="377" cy="162" r="16.5" stroke="black" stroke-width="3"/>
+<circle cx="377" cy="109" r="16.5" stroke="black" stroke-width="3"/>
+<circle cx="428" cy="109" r="16.5" stroke="black" stroke-width="3"/>
+<circle cx="165" cy="162" r="16.5" stroke="black" stroke-width="3"/>
+<circle cx="26" cy="246" r="16.5" stroke="black" stroke-width="3"/>
+</svg>
