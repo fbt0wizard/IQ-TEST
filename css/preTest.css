@@ -116,6 +116,7 @@ body {
 @media screen and (max-width: 583px) {
     .lds-facebook {
         margin-left: 41%;
+        top: 26vh;
     }
 
     .first-container h2 {
