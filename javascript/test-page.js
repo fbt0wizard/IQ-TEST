@@ -6,6 +6,14 @@ const correct = [];
 
 var randomArray = [];
 
+async function delay(delayInms) {
+    return new Promise (resolve => {
+      setTimeout(() => {
+        resolve(2);
+      }, delayInms);
+    })
+}
+
 // Assigning numbers to question
 
 var qOne = document.getElementById("question1");
@@ -47,52 +55,60 @@ function stop() {
     alert("time up");
 }
 
-function start() {
+async function start() {
     var result = questions[Math.floor(Math.random()*questions.length)];
     randomArray.push(result);
     answered.push(result);
     var hot = document.getElementById("startPage");
     if (hot.style.display = "block") {
-        $(hot).fadeOut();
-        $(result).fadeIn();
-        $("#backNext").fadeIn();
-        $("#finish").fadeIn();
+        $(hot).hide();
+        $("#waiting").show();
+        await delay(1000);
+        $("#waiting").hide();
+        $(result).show();
+        $("#backNext").show();
+        $("#finish").show();
     };
     countDown();
 };
 
-function next() {
-    console.log(answered.length);
+async function next() {
     if(answered.length == 5) {
-        alert("Test Completed");
+        alert("Test Completed, Result Is Prosessing");
         return;
     }
+    if (answered.length == 1) {
+        var oneQ = answered.slice(-1);
+        $(oneQ).hide();
+        $("#finish").hide();
+        $("#waiting").show();
+    }
+
+    if(answered.length > 1) {
+        var lastQ = answered.slice(-1);
+        $(lastQ).hide();
+        $("#finish").hide();
+        $("#waiting").show();
+    }
+    console.log(answered.length);
+
     var result = questions[Math.floor(Math.random()*questions.length)];
     if(answered.includes(result)) {
         next();
         return;
     }
-    if(answered.length == 1) {
-        var oneQ = answered.slice(-1);
-        $(oneQ).fadeOut();
-        $(result).fadeIn();
+    if (answered.length == 1) {
+        await delay(1000);
+        $("#waiting").hide();
+        $(result).show();
+        $("#finish").show();
     }
     if(answered.length > 1) {
-    var lastQ = answered.slice(-1);
-    $(lastQ).fadeOut();
-    $(result).fadeIn();
+    await delay(1000);
+    $("#waiting").hide();
+    $(result).show();
+    $("#finish").show();
     }
     answered.push(result);
 
 }
-
-
-// function nextQ() {
-//     var result = questions[Math.floor(Math.random()*questions.length)];
-
-//     if(randomArray.includes(randomGen)) {
-//         nextQ();
-//     } else {
-//        randomArray.push(randomGen);
-//     }
-// }

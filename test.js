@@ -61,13 +61,26 @@
 // function pow() {
 //   alert("i worked");
 // }
+async function delay(delayInms) {
+  return new Promise (resolve => {
+    setTimeout(() => {
+      resolve(2);
+    }, delayInms);
+  })
+}
 
 var q1 = document.getElementById("check");
 var q2 = document.getElementById("a1A");
 var q3 = document.getElementById("btn");
 
 const test = [q1, q2, q3];
-console.log(test.length);
-console.log(test.slice(-1));
-// console.log(typeof cut);
-// console.log(test.length);
+
+async function fire() {
+  console.log(test.length);
+  console.log(test.slice(-1));
+  console.log(typeof cut);
+  await delay(5000);
+  console.log(test.length);
+}
+
+
