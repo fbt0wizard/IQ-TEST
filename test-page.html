@@ -56,7 +56,7 @@
             <button><i class="fa fa-chevron-left" aria-hidden="true"></i> BACK</button>
         </div>
         <div class="next">
-            <button>NEXT <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+            <button onclick="next()">NEXT <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
         </div>
     </div>
 </div>
@@ -72,25 +72,26 @@
         <div class="answer">
             <div class="answer-top">
                 <p >A</p>
-                <input type="radio" id="q1A" name="q1" value="a">
+                <input type="radio" id="q1A" name="q1" value="a" class="ques">
                 <label for="q1A"><img src="/questions/a1.svg" alt=""></label>
                 <p id="answerTop">B</p>
-                <input type="radio" id="q1B" name="q1" value="b">
+                <input type="radio" id="q1B" name="q1" value="b" class="ques">
                 <label for="q1B"><img src="/questions/a2.svg" alt=""></label>
             </div>
             <div class="answer-top">
                 <p>C</p>
-                <input type="radio" id="q1C" name="q1" value="c">
+                <input type="radio" id="q1C" name="q1" value="c" class="ques">
                 <label for="q1C"><img src="/questions/a3.svg" alt=""></label>
                 <p id="answerTop">D</p>
-                <input type="radio" id="q1D" name="q1" value="d">
+                <input type="radio" id="q1D" name="q1" value="d" class="ques">
                 <label for="q1D"><img src="/questions/a4.svg" alt=""></label>
             </div>
         </div>
     </div>
 </div>
 
-    <div class="question-wrapper" id="question2">
+<div id="question2">
+    <div class="question-wrapper">
         
         <div class="question">
             <p>Select the correct answer that fits the missing space</p>
@@ -120,8 +121,11 @@
             </div>
         </div>
     </div>
+</div>
 
-    <div class="question-wrapper" id="question3">
+
+<div id="question3">
+    <div class="question-wrapper">
         
 
         <div class="answer">
@@ -149,8 +153,11 @@
             </div>
         </div>
     </div>
+</div>
 
-    <div class="question-wrapper"  id="question4">
+
+<div  id="question4">
+    <div class="question-wrapper">
         
         <div class="question">
             <p>What number should replace the question mark?</p>
@@ -175,8 +182,11 @@
             </div>
         </div>
     </div>
+</div>
 
-    <div class="question-wrapper"  id="question5">
+
+<div  id="question5">
+    <div class="question-wrapper">
         
         <div class="question">
             <p>Select the correct answer that fits the missing space</p>
@@ -209,6 +219,7 @@
             </div>
         </div>
     </div>
+</div>
 
     <div class="action" id="finish">
         <p class="label">Submit only when you are through</p>
@@ -219,7 +230,8 @@
 
 </form>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script src="/jquery-3.6.0.min.js"></script>
     <script src="/javascript/test-page.js"></script>
 </body>
 </html>
