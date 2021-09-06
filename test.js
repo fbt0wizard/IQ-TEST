@@ -4,7 +4,7 @@ const answered = [];
 
 const back = [];
 
-const correct = [];
+const checker = [];
 
 var randomArray = [];
 
@@ -49,7 +49,6 @@ display = document.querySelector('#time');
 
 function countDown() {
     startTimer(fiveMinutes, display);
-    console.log(fiveMinutes);
     setTimeout(stop, 62000);
 };
 
@@ -74,13 +73,12 @@ async function start() {
         $("#finish").show();
     };
     countDown();
-
-    console.log(currentQ);
 };
 
 async function next() {
+  checker.push(currentQ);
   if(answered.length == 5) {
-    alert("Test Completed, Result Is Prosessing");
+    alert("Clicked Submit");
     return;
 }
       currentQ= "";
@@ -97,7 +95,6 @@ async function next() {
         $("#finish").hide();
         $("#waiting").show();
     }
-    console.log(answered.length);
 
     var result = questions[Math.floor(Math.random()*questions.length)];
     if(answered.includes(result)) {
@@ -119,9 +116,6 @@ async function next() {
     answered.push(result);
     back.push(result);
     currentQ = result;
-
-    console.log(answered);
-    console.log(currentQ);
 }
 
 var fArg = -2;
@@ -132,7 +126,6 @@ async function navBack() {
   var aList = answered.length;
   var currentPage = answered.indexOf(currentQ);
 
-  console.log(aList);
   if(aList > currentPage) {
     var pPage = answered.slice(fArg--, sArg--);
     if(pPage.length == 0) {
@@ -140,17 +133,88 @@ async function navBack() {
       return;
     }
     $(currentQ).hide();
+    $("#finish").hide();
     $("#waiting").show();
     await delay(1000);
     $("#waiting").hide();
     $(pPage).show();
+    $("#finish").show();
+  }
+  currentQ= "";
+  reAssign();
+  counter = answered.indexOf(currentQ) + 1;
+}
+
+var nextA1;
+var nextA2;
+var nAns;
+var counter = 1;
+
+async function navNext() {
+  let up = answered.length;
+  let down = answered.indexOf(currentQ) +1;
+
+  if(up == down) {
+    next();
+    return;
+  }
+  if(counter == nAns) {
+    next();
+    return;
+  }
+  console.log(answered.includes(currentQ));
+  console.log(currentQ);
+  console.log(answered);
+  if (answered.includes(currentQ)) {
+    fArg = -2;
+
+    sArg = -1;
+    nAns = answered.length;
+    // reAssign();
+    let ind = answered.indexOf(currentQ) + 1;
+    if(ind < answered.length) {
+      nextA1 = ind;
+      nextA2 = ind + 1;
+      var nPage = answered.slice(nextA1++, nextA2++);
+      if(nPage.length == 0) {
+        return;
+      }
+      $(currentQ).hide();
+      $("#finish").hide();
+      $("#waiting").show();
+      await delay(1000);
+      $("#waiting").hide();
+      $(nPage).show();
+      $("#finish").show();
+      counter++;
+    }
+    currentQ= "";
+    reAssign();
+    return;
 
   }
-
-  currentQ= "";
-
-  currentQ = pPage;
+  next();
+};
 
 
-    console.log(pPage);
+function reAssign() {
+  if($('#question1:visible').length != 0) {
+    currentQ = qOne;
+  }
+
+  if($('#question2:visible').length != 0) {
+    currentQ = qTwo;
+  }
+
+  if($('#question3:visible').length != 0) {
+    currentQ = qThree;
+  }
+
+  if($('#question4:visible').length != 0) {
+    currentQ = qFour;
+  }
+
+  if($('#question5:visible').length != 0) {
+    currentQ = qFive;
+  }
 }
