@@ -111,4 +111,9 @@ async function next() {
     }
     answered.push(result);
 
+    console.log(answered);
+}
+
+async function back() {
+    
 }

@@ -1,86 +1,156 @@
+var currentQ;
 
-// var qOne = "who you?";
-// var qTwo = "who me?";
-// var qThree = "who they?";
-// var qFour = "who them?";
-// var qFive = 455;
+const answered = [];
 
-// var q1 = qOne;
-// var q2 = qTwo;
-// var q3 = qThree;
-// var q4 = qFour;
-// var q5 = qFive;
+const back = [];
 
-// function randomNumber() {
-//     var nums = [1,2,3,4,5];
-//     i = nums.length,
-//     j = 0;
+const correct = [];
 
-//     while (i--) {
-//         j = Math.floor(Math.random() * (i+1));
-//         ranNums.push(nums[j]);
-//         nums.splice(j,1);
-//     }
-//     console.log(ranNums);
-// }
+var randomArray = [];
 
-
-// var randomArray = [];
-
-// function getRandomInt(max) {
-//   return Math.floor(Math.random() * max);
-// }
-
-// function run() {
-//     let randomGen = getRandomInt(6);
-//     console.log(randomGen);
-//       if(randomArray.includes(randomGen)) {
-//       run();
-//     } else {
-//      randomArray.push(randomGen);
-//     }
-
-//  document.getElementById("check").innerHTML = randomGen;
-//  document.getElementById("result").innerHTML = randomArray;
-// };
-
-
-// console.log(result);
-// console.log(typeof result);
-
-
-
-// var hop = document.getElementsByName("q1");
-// hop.addEventListener('click', function() {
-//   pow();
-// }, false
-// );
-
-
-
-// function pow() {
-//   alert("i worked");
-// }
 async function delay(delayInms) {
-  return new Promise (resolve => {
-    setTimeout(() => {
-      resolve(2);
-    }, delayInms);
-  })
+    return new Promise (resolve => {
+      setTimeout(() => {
+        resolve(2);
+      }, delayInms);
+    })
 }
 
-var q1 = document.getElementById("check");
-var q2 = document.getElementById("a1A");
-var q3 = document.getElementById("btn");
+// Assigning numbers to question
 
-const test = [q1, q2, q3];
+var qOne = document.getElementById("question1");
+var qTwo = document.getElementById("question2");
+var qThree = document.getElementById("question3");
+var qFour = document.getElementById("question4");
+var qFive = document.getElementById("question5");
 
-async function fire() {
-  console.log(test.length);
-  console.log(test.slice(-1));
-  console.log(typeof cut);
-  await delay(5000);
-  console.log(test.length);
+const questions = [qOne, qTwo, qThree, qFour, qFive];
+
+// count down time
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+};
+
+var fiveMinutes = 60 * 1,
+display = document.querySelector('#time');
+
+function countDown() {
+    startTimer(fiveMinutes, display);
+    console.log(fiveMinutes);
+    setTimeout(stop, 62000);
+};
+
+function stop() {
+    alert("time up");
 }
 
+async function start() {
+    currentQ = "";
+    var result = questions[Math.floor(Math.random()*questions.length)];
+    answered.push(result);
+    back.push(result);
+    currentQ = result;
+    var hot = document.getElementById("startPage");
+    if (hot.style.display = "block") {
+        $(hot).hide();
+        $("#waiting").show();
+        await delay(1000);
+        $("#waiting").hide();
+        $(result).show();
+        $("#backNext").show();
+        $("#finish").show();
+    };
+    countDown();
 
+    console.log(currentQ);
+};
+
+async function next() {
+  if(answered.length == 5) {
+    alert("Test Completed, Result Is Prosessing");
+    return;
+}
+      currentQ= "";
+    if (answered.length == 1) {
+        var oneQ = answered.slice(-1);
+        $(oneQ).hide();
+        $("#finish").hide();
+        $("#waiting").show();
+    }
+
+    if(answered.length > 1) {
+        var lastQ = answered.slice(-1);
+        $(lastQ).hide();
+        $("#finish").hide();
+        $("#waiting").show();
+    }
+    console.log(answered.length);
+
+    var result = questions[Math.floor(Math.random()*questions.length)];
+    if(answered.includes(result)) {
+        next();
+        return;
+    }
+    if (answered.length == 1) {
+        await delay(1000);
+        $("#waiting").hide();
+        $(result).show();
+        $("#finish").show();
+    }
+    if(answered.length > 1) {
+    await delay(1000);
+    $("#waiting").hide();
+    $(result).show();
+    $("#finish").show();
+    }
+    answered.push(result);
+    back.push(result);
+    currentQ = result;
+
+    console.log(answered);
+    console.log(currentQ);
+}
+
+var fArg = -2;
+
+var sArg = -1;
+
+async function navBack() {
+  var aList = answered.length;
+  var currentPage = answered.indexOf(currentQ);
+
+  console.log(aList);
+  if(aList > currentPage) {
+    var pPage = answered.slice(fArg--, sArg--);
+    if(pPage.length == 0) {
+      alert("back complete");
+      return;
+    }
+    $(currentQ).hide();
+    $("#waiting").show();
+    await delay(1000);
+    $("#waiting").hide();
+    $(pPage).show();
+
+  }
+
+  currentQ= "";
+
+  currentQ = pPage;
+
+
+    console.log(pPage);
+}
