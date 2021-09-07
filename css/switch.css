@@ -1,3 +1,7 @@
+#time {
+    visibility: hidden;
+}
+
 #question1 {
     display: none;
 }

@@ -80,7 +80,7 @@ async function next() {
   if(answered.length == 5) {
     alert("Clicked Submit");
     return;
-}
+    }
       currentQ= "";
     if (answered.length == 1) {
         var oneQ = answered.slice(-1);
