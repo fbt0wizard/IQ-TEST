@@ -7,7 +7,7 @@ async function delay(delayInms) {
     })
 }
 
-// Programme timer
+// Program timer
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
     setInterval(function () {
@@ -25,7 +25,7 @@ function startTimer(duration, display) {
     }, 1000);
 };
 
-// set timer to one minute
+// set timer to 6 minute
 var fiveMinutes = 60 * 6,
 display = document.querySelector('#time');
 
@@ -58,6 +58,9 @@ function move() {
         i = 0;
     }
 }
+
+// create a variable called notifier
+var not = 10;
   
   // Assigning var to question
   var qOne = document.getElementById("question1");
@@ -113,7 +116,9 @@ async function start() {
   var sliceArg1;
   var sliceArg2;
 async function next() {
-    move();
+    if(not == 10) {
+      move();
+    }
     var ind = randomQuestions.indexOf(currentQ);
     sliceArg1 = ind + 1;
     sliceArg2 = ind + 2;
@@ -129,6 +134,9 @@ async function next() {
     $(nextTest).show();
     $("#finish").show();
     reAssign();
+    if(not != 10) {
+      not++;
+    }
 }
   
   // setting back button function
@@ -151,6 +159,8 @@ async function back() {
     $(newTest).show();
     $("#finish").show();
     reAssign();
+    not--;
+    console.log(not);
 }
   
   
