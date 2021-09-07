@@ -26,17 +26,37 @@ function startTimer(duration, display) {
 };
 
 // set timer to one minute
-var fiveMinutes = 60 * 1,
+var fiveMinutes = 60 * 6,
 display = document.querySelector('#time');
 
 function countDown() {
     startTimer(fiveMinutes, display);
-    setTimeout(stop, 62000);
+    setTimeout(stop, 362000);
 };
 
 function stop() {
     alert("time up");
     return;
+}
+
+// Progress bar
+var w = 0;
+var i = 0;
+function move() {
+  let progress = document.getElementById('myProgress');
+  if(progress.style.visibility = "hidden") {
+      progress.style.visibility = "visible";
+  }
+  if(w < 100) {
+    i = 1;
+    var elem = document.getElementById('myBar');
+    var width = w;
+        var newWidth = width + 20;
+        elem.style.width = newWidth + '%';
+        elem.innerHTML = newWidth + '%';
+        w = newWidth;
+        i = 0;
+    }
 }
   
   // Assigning var to question
@@ -62,7 +82,6 @@ function getRandomQ() {
         start();
       }    
     } else {
-      console.log(randomQuestions);
       return;
     }
 }
@@ -94,15 +113,14 @@ async function start() {
   var sliceArg1;
   var sliceArg2;
 async function next() {
+    move();
     var ind = randomQuestions.indexOf(currentQ);
     sliceArg1 = ind + 1;
     sliceArg2 = ind + 2;
     var nextTest = randomQuestions.slice(sliceArg1++, sliceArg2++);
     if(nextTest.length == 0){
-      alert("Test complete please submit or click back to review");
       return;
     }
-    console.log(currentQ);
     $(currentQ).hide();
     $("#finish").hide();
     $("#waiting").show();
