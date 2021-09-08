@@ -39,7 +39,7 @@
             <button onclick="back()"><i class="fa fa-chevron-left" aria-hidden="true"></i> BACK</button>
         </div>
         <div class="next">
-            <button onclick="next()">NEXT <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+            <button onclick="navNext()">NEXT <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
         </div>
     </div>
 </div>
@@ -62,18 +62,18 @@
         <div class="answer">
             <div class="answer-top">
                 <p >A</p>
-                <input type="radio" id="q1A" name="q1" value="a" class="ques">
+                <input type="radio" id="q1A" name="q1" value="a" class="ques" onclick="next()">
                 <label for="q1A"><img src="/questions/a1.svg" alt=""></label>
                 <p id="answerTop">B</p>
-                <input type="radio" id="q1B" name="q1" value="b" class="ques">
+                <input type="radio" id="q1B" name="q1" value="b" class="ques" onclick="next()">
                 <label for="q1B"><img src="/questions/a2.svg" alt=""></label>
             </div>
             <div class="answer-top">
                 <p>C</p>
-                <input type="radio" id="q1C" name="q1" value="c" class="ques">
+                <input type="radio" id="q1C" name="q1" value="c" class="ques" onclick="next()">
                 <label for="q1C"><img src="/questions/a3.svg" alt=""></label>
                 <p id="answerTop">D</p>
-                <input type="radio" id="q1D" name="q1" value="d" class="ques">
+                <input type="radio" id="q1D" name="q1" value="d" class="ques" onclick="next()">
                 <label for="q1D"><img src="/questions/a4.svg" alt=""></label>
             </div>
         </div>
@@ -90,23 +90,23 @@
         <div class="answer">
             <div class="answer-top">
                 <p >A</p>
-                <input type="radio" id="optionA" name="q2" value="a">
+                <input type="radio" id="optionA" name="q2" value="a" onclick="next()">
                 <label for="optionA"><img src="/questions/2a1.svg" alt=""></label>   
                 <p id="answerTop">B</p>
-                <input type="radio" id="optionB" name="q2" value="b">
+                <input type="radio" id="optionB" name="q2" value="b" onclick="next()">
                 <label for="optionB"><img src="/questions/2a2.svg" alt=""></label>     
             </div>
             <div class="answer-top">
                 <p>C</p>
-                <input type="radio" id="optionC" name="q2" value="c">
+                <input type="radio" id="optionC" name="q2" value="c" onclick="next()">
                 <label for="optionC"><img src="/questions/2a3.svg" alt=""></label>     
                 <p id="answerTop">D</p>      
-                <input type="radio" id="optionD" name="q2" value="d">
+                <input type="radio" id="optionD" name="q2" value="d" onclick="next()">
                 <label for="optionD"><img src="/questions/2a4.svg" alt=""></label>        
             </div>
             <div class="answer-top">
                 <p id="answerAlone">E</p>
-                <input type="radio" id="optionE" name="q2" value="e">
+                <input type="radio" id="optionE" name="q2" value="e" onclick="next()">
                 <label for="optionE"><img src="/questions/2a5.svg" alt=""></label>       
             </div>
         </div>
@@ -122,23 +122,23 @@
             <p>Which is the odd one out?</p>
             <div class="special">
                 <p >A</p>
-                <input type="radio" id="q3A" name="q3" value="a">
+                <input type="radio" id="q3A" name="q3" value="a" onclick="next()">
                 <label for="q3A"><img src="/questions/q3.svg" alt=""></label>
                 <p id="answerTop">B</p>
-                <input type="radio" id="q3B" name="q3" value="b">
+                <input type="radio" id="q3B" name="q3" value="b" onclick="next()">
                 <label for="q3B"><img src="/questions/q3b.svg" alt=""></label>
             </div>
             <div class="special">
                 <p>C</p>
-                <input type="radio" id="q3C" name="q3" value="c">
+                <input type="radio" id="q3C" name="q3" value="c" onclick="next()">
                 <label for="q3C"><img src="/questions/q3c.svg" alt=""></label>
                 <p id="answerTop">D</p>
-                <input type="radio" id="q3D" name="q3" value="d">
+                <input type="radio" id="q3D" name="q3" value="d" onclick="next()">
                 <label for="q3D"><img src="/questions/q3d.svg" alt=""></label>
             </div>
             <div class="special">
                 <p id="answerAlone">E</p>
-                <input type="radio" id="q3E" name="q3" value="e">
+                <input type="radio" id="q3E" name="q3" value="e" onclick="next()">
                 <label for="q3E"><img src="/questions/q3e.svg" alt=""></label>       
             </div>
         </div>
@@ -156,18 +156,18 @@
         <div class="answer2">
             <div class="answer-diff-top">
                 <p >A</p>
-                <input type="radio" id="q4A" name="q4" value="a">
+                <input type="radio" id="q4A" name="q4" value="a" onclick="next()">
                 <label for="q4A"><p>2</p></label>
                 <p id="answerDiff">B</p>
-                <input type="radio" id="q4B" name="q4" value="b">
+                <input type="radio" id="q4B" name="q4" value="b" onclick="next()">
                 <label for="q4B"><p>4</p></label>
             </div>
             <div class="answer-diff">
                 <p>C</p>
-                <input type="radio" id="q4C" name="q4" value="c">
+                <input type="radio" id="q4C" name="q4" value="c" onclick="next()">
                 <label for="q4C"><p>8</p></label>
                 <p id="answerDiff">D</p>
-                <input type="radio" id="q4D" name="q4" value="d">
+                <input type="radio" id="q4D" name="q4" value="d" onclick="next()">
                 <label for="q4D"><p>0</p></label>
             </div>
         </div>
@@ -185,26 +185,26 @@
         <div class="answer">
             <div class="answer-top">
                 <p >A</p>
-                <input type="radio" id="q5A" name="q5" value="a">
+                <input type="radio" id="q5A" name="q5" value="a" onclick="next()">
                 <label for="q5A"><img src="/questions/a5a.svg" alt=""></label>   
                 <p id="answerTop">B</p>
-                <input type="radio" id="q5B" name="q5" value="b">
+                <input type="radio" id="q5B" name="q5" value="b" onclick="next()">
                 <label for="q5B"><img src="/questions/a5b.svg" alt=""></label>     
             </div>
             <div class="answer-top">
                 <p>C</p>
-                <input type="radio" id="q5C" name="q5" value="c">
+                <input type="radio" id="q5C" name="q5" value="c" onclick="next()">
                 <label for="q5C"><img src="/questions/a5c.svg" alt=""></label>     
                 <p id="answerTop">D</p>      
-                <input type="radio" id="q5D" name="q5" value="d">
+                <input type="radio" id="q5D" name="q5" value="d" onclick="next()">
                 <label for="q5D"><img src="/questions/a5d.svg" alt=""></label>        
             </div>
             <div class="answer-top">
                 <p>E</p>
-                <input type="radio" id="q5E" name="q5" value="c">
+                <input type="radio" id="q5E" name="q5" value="e" onclick="next()">
                 <label for="q5E"><img src="/questions/a5e.svg" alt=""></label>     
                 <p id="answerTop">F</p>      
-                <input type="radio" id="q5F" name="q5" value="d">
+                <input type="radio" id="q5F" name="q5" value="f" onclick="next()">
                 <label for="q5F"><img src="/questions/a5f.svg" alt=""></label>        
             </div>
         </div>

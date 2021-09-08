@@ -1,3 +1,6 @@
+// setting container for already answered question
+const clickedQ = [];
+
 // setting delay function
 async function delay(delayInms) {
     return new Promise (resolve => {
@@ -58,9 +61,6 @@ function move() {
         i = 0;
     }
 }
-
-// create a variable called notifier
-var not = 10;
   
   // Assigning var to question
   var qOne = document.getElementById("question1");
@@ -94,6 +94,7 @@ function getRandomQ() {
   
   //setting start button function
 async function start() {
+    uncheck();
     getRandomQ();
     var firstTest = randomQuestions.slice(0, 1);
     $("#startPage").hide();
@@ -116,7 +117,7 @@ async function start() {
   var sliceArg1;
   var sliceArg2;
 async function next() {
-    if(not == 10) {
+    if(clickedQ.includes(currentQ) == false) {
       move();
     }
     var ind = randomQuestions.indexOf(currentQ);
@@ -124,8 +125,10 @@ async function next() {
     sliceArg2 = ind + 2;
     var nextTest = randomQuestions.slice(sliceArg1++, sliceArg2++);
     if(nextTest.length == 0){
+      alreadyPicked();
       return;
     }
+    alreadyPicked();
     $(currentQ).hide();
     $("#finish").hide();
     $("#waiting").show();
@@ -134,9 +137,24 @@ async function next() {
     $(nextTest).show();
     $("#finish").show();
     reAssign();
-    if(not != 10) {
-      not++;
-    }
+}
+
+async function navNext() {
+  var ind = randomQuestions.indexOf(currentQ);
+  sliceArg1 = ind + 1;
+  sliceArg2 = ind + 2;
+  var nextTest = randomQuestions.slice(sliceArg1++, sliceArg2++);
+  if(nextTest.length == 0){
+    return;
+  }
+  $(currentQ).hide();
+  $("#finish").hide();
+  $("#waiting").show();
+  await delay(1000);
+  $("#waiting").hide();
+  $(nextTest).show();
+  $("#finish").show();
+  reAssign();
 }
   
   // setting back button function
@@ -159,8 +177,6 @@ async function back() {
     $(newTest).show();
     $("#finish").show();
     reAssign();
-    not--;
-    console.log(not);
 }
   
   
@@ -187,4 +203,174 @@ function reAssign() {
       currentQ = qFive;
     }
 }
+
+// Uncheck all radio buttons 
+function uncheck() {
+  document.getElementById('q1A').checked = false;
+  document.getElementById('q1B').checked = false;
+  document.getElementById('q1C').checked = false;
+  document.getElementById('q1D').checked = false;
+  document.getElementById('optionA').checked = false;
+  document.getElementById('optionB').checked = false;
+  document.getElementById('optionC').checked = false;
+  document.getElementById('optionD').checked = false;
+  document.getElementById('optionE').checked = false;
+  document.getElementById('q3A').checked = false;
+  document.getElementById('q3B').checked = false;
+  document.getElementById('q3C').checked = false;
+  document.getElementById('q3D').checked = false;
+  document.getElementById('q3E').checked = false;
+  document.getElementById('q4A').checked = false;
+  document.getElementById('q4B').checked = false;
+  document.getElementById('q4C').checked = false;
+  document.getElementById('q4D').checked = false;
+  document.getElementById('q5A').checked = false;
+  document.getElementById('q5B').checked = false;
+  document.getElementById('q5C').checked = false;
+  document.getElementById('q5D').checked = false;
+  document.getElementById('q5E').checked = false;
+  document.getElementById('q5F').checked = false;
+}
+
+// Check if answer is already picked
+function alreadyPicked() {
+  if(currentQ == qOne) {
+    if(document.getElementById('q1A').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+    if(document.getElementById('q1B').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+    if(document.getElementById('q1C').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+    if(document.getElementById('q1D').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+  }
+
+  if(currentQ == qTwo) {
+    if(document.getElementById('optionA').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+    if(document.getElementById('optionB').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+    if(document.getElementById('optionC').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+    if(document.getElementById('optionD').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+    if(document.getElementById('optionE').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+  }
+  
+  if(currentQ == qThree) {
+    if(document.getElementById('q3A').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+    if(document.getElementById('q3B').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+    if(document.getElementById('q3C').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+    if(document.getElementById('q3D').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+    if(document.getElementById('q3E').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+  }
+
+  if(currentQ == qFour) {
+    if(document.getElementById('q4A').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+    if(document.getElementById('q4B').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+    if(document.getElementById('q4C').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+    if(document.getElementById('q4D').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+  }
+
+  if(currentQ == qFive) {
+    if(document.getElementById('q5A').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+    if(document.getElementById('q5B').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+    if(document.getElementById('q5C').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+    if(document.getElementById('q5D').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+    if(document.getElementById('q5E').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+    if(document.getElementById('q5F').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+  }
+  
+}
+
+
+
 
