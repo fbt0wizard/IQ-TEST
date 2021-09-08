@@ -68,9 +68,10 @@ function move() {
   var qThree = document.getElementById("question3");
   var qFour = document.getElementById("question4");
   var qFive = document.getElementById("question5");
+  var qSix = document.getElementById("question6");
   
   // setting Container of questions
-  const questions = [qOne, qTwo, qThree, qFour, qFive];
+  const questions = [qOne, qTwo, qThree, qFour, qFive, qSix];
   
   // generate 5 reandom questions
   const randomQuestions = [];
@@ -87,6 +88,8 @@ function getRandomQ() {
     } else {
       return;
     }
+
+    console.log(randomQuestions);
 }
   
   // variale of current displaying function
@@ -202,6 +205,10 @@ function reAssign() {
     if($('#question5:visible').length != 0) {
       currentQ = qFive;
     }
+
+    if($('#question6:visible').length != 0) {
+      currentQ = qSix;
+    }
 }
 
 // Uncheck all radio buttons 
@@ -210,26 +217,36 @@ function uncheck() {
   document.getElementById('q1B').checked = false;
   document.getElementById('q1C').checked = false;
   document.getElementById('q1D').checked = false;
+
   document.getElementById('optionA').checked = false;
   document.getElementById('optionB').checked = false;
   document.getElementById('optionC').checked = false;
   document.getElementById('optionD').checked = false;
   document.getElementById('optionE').checked = false;
+
   document.getElementById('q3A').checked = false;
   document.getElementById('q3B').checked = false;
   document.getElementById('q3C').checked = false;
   document.getElementById('q3D').checked = false;
   document.getElementById('q3E').checked = false;
+
   document.getElementById('q4A').checked = false;
   document.getElementById('q4B').checked = false;
   document.getElementById('q4C').checked = false;
   document.getElementById('q4D').checked = false;
+
   document.getElementById('q5A').checked = false;
   document.getElementById('q5B').checked = false;
   document.getElementById('q5C').checked = false;
   document.getElementById('q5D').checked = false;
   document.getElementById('q5E').checked = false;
   document.getElementById('q5F').checked = false;
+
+  document.getElementById('q6A').checked = false;
+  document.getElementById('q6B').checked = false;
+  document.getElementById('q6C').checked = false;
+  document.getElementById('q6D').checked = false;
+  document.getElementById('q6E').checked = false;
 }
 
 // Check if answer is already picked
@@ -363,6 +380,34 @@ function alreadyPicked() {
       }
     }
     if(document.getElementById('q5F').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+  }
+
+  if(currentQ == qSix) {
+    if(document.getElementById('q6A').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+    if(document.getElementById('q6B').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+    if(document.getElementById('q6C').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+    if(document.getElementById('q6D').checked == true) {
+      if(clickedQ.includes(currentQ) == false) {
+        clickedQ.push(currentQ);
+      }
+    }
+    if(document.getElementById('q6E').checked == true) {
       if(clickedQ.includes(currentQ) == false) {
         clickedQ.push(currentQ);
       }
