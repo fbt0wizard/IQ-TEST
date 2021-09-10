@@ -33,6 +33,20 @@
         </div>
     </div>
 
+    <div class="score-page" id="scorePage">
+        <p>
+            Please see your IQ score below
+        </p>
+        <br>
+        <h1 id="score"></h1>
+        
+
+
+        <div class="start-btn">
+            <a href="index.html">HOME</a>
+        </div>
+    </div>
+
     <div id="backNext">
     <div class="buttons">
         <div class="prev">
@@ -47,8 +61,13 @@
 <div id="waiting">
     <div class="waiting">
         <div class="lds-facebook"><div></div><div></div><div></div></div>
-    </div>
-    
+    </div>   
+</div>
+
+<div id="waiting2">
+        <p class="roll-score">Getting your IQ score</p>
+        <div class="lds-hourglass"></div>
+  
 </div>
 
     <form action="#">
@@ -246,7 +265,7 @@
 
     <div class="action" id="finish">
         <p class="label">Submit only when you are through</p>
-        <button> SUBMIT</button>
+        <button type="button" onclick="score()"> SUBMIT</button>
     </div>
 
 

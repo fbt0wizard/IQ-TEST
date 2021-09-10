@@ -38,6 +38,17 @@
     display: none;
 }
 
+#scorePage {
+    display: none;
+}
+
+#waiting2 {
+    display: none;
+}
+
+/* #startPage {
+    display: none;
+} */
 #myProgress {
     visibility: hidden;
     width: 70%;

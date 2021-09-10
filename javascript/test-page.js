@@ -88,8 +88,6 @@ function getRandomQ() {
     } else {
       return;
     }
-
-    console.log(randomQuestions);
 }
   
   // variale of current displaying function
@@ -414,6 +412,82 @@ function alreadyPicked() {
     }
   }
   
+}
+
+// create a variable for result
+var ques1;
+var ques2;
+var ques3;
+var ques4;
+var ques5;
+var ques6;
+
+var finalReport;
+
+// scoring the test
+async function score() {
+  // check score question 1
+  var q1 = document.getElementById('q1A').checked;
+  if(q1 == true) {
+    ques1 = 32;
+  } else {
+    ques1 = 0;
+  }
+
+  // check score question 2
+  var q2 = document.getElementById('optionB').checked;
+  if(q2 == true) {
+    ques2 = 32;
+  }  else {
+    ques2 = 0;
+  }
+
+  // check score question 3
+  var q3 = document.getElementById('q3C').checked;
+  if(q3 == true) {
+    ques3 = 32;
+  }  else {
+    ques3 = 0;
+  }
+
+  // check score question 4
+  var q4 = document.getElementById('q4B').checked;
+  if(q4 == true) {
+    ques4 = 32;
+  }  else {
+    ques4 = 0;
+  }
+
+  // check score question 5
+  var q5 = document.getElementById('q5C').checked;
+  if(q5 == true) {
+    ques5 = 32;
+  }  else {
+    ques5 = 0;
+  }
+
+  // check score question 6
+  var q6 = document.getElementById('q6D').checked;
+  if(q6 == true) {
+    ques6 = 32;
+  }  else {
+    ques6 = 0;
+  }
+  
+  var finalScore = ques1 + ques2 + ques3 + ques4 + ques5 + ques6;
+  finalReport = finalScore;
+
+  document.getElementById("score").innerHTML = finalReport;
+
+  $(currentQ).hide();
+  $("#finish").hide();
+  $("#backNext").hide();
+  $("#time").hide();
+  $("#myProgress").hide();
+  $("#waiting2").show();
+  await delay(5000);
+  $("#waiting2").hide();
+  $("#scorePage").show();
 }
 
 
