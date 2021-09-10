@@ -427,7 +427,7 @@ var finalReport;
 // scoring the test
 async function score() {
   // check score question 1
-  var q1 = document.getElementById('q1A').checked;
+  var q1 = document.getElementById('q1D').checked;
   if(q1 == true) {
     ques1 = 32;
   } else {
