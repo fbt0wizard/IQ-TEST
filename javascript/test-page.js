@@ -17,7 +17,7 @@ function startTimer(duration, display) {
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
 
-        minutes = minutes < 10 ? "0" + minutes : minutes;
+        minutes = minutes < 10 ? minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
         display.textContent = minutes + ":" + seconds;
@@ -100,6 +100,7 @@ async function start() {
     var firstTest = randomQuestions.slice(0, 1);
     $("#startPage").hide();
     $("#waiting").show();
+    countDown();
     await delay(1000);
     $("#waiting").hide();
     $(firstTest).show();
@@ -109,8 +110,6 @@ async function start() {
     if(time.style.visibility = "hidden") {
         time.style.visibility = "visible";
     }
-    
-    countDown();
     reAssign();
 }
   
