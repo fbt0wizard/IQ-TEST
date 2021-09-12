@@ -11,6 +11,8 @@ async function delay(delayInms) {
 }
 
 // Program timer
+var myTime;
+var currentTime;
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
     setInterval(function () {
@@ -29,11 +31,11 @@ function startTimer(duration, display) {
 };
 
 // set timer to 6 minute
-var fiveMinutes = 60 * 6,
+var sixMinutes = 60 * 6,
 display = document.querySelector('#time');
 
 function countDown() {
-    startTimer(fiveMinutes, display);
+    startTimer(sixMinutes, display);
     setTimeout(stop, 362000);
 };
 
@@ -425,6 +427,9 @@ var finalReport;
 
 // scoring the test
 async function score() {
+  var finishTime = (document.getElementById("time").textContent);
+  let myo = finishTime.replace(":", ".");
+  console.log(Number(myo));
   // check score question 1
   var q1 = document.getElementById('q1D').checked;
   if(q1 == true) {
