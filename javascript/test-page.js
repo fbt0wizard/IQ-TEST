@@ -1,6 +1,8 @@
 // setting container for already answered question
 const clickedQ = [];
 
+var stopTime = 0;
+
 // setting delay function
 async function delay(delayInms) {
     return new Promise (resolve => {
@@ -40,8 +42,11 @@ function countDown() {
 };
 
 function stop() {
-    alert("time up");
+  if(stopTime == 0) {
+    score();
+  } else {
     return;
+  }
 }
 
 // Progress bar
@@ -427,6 +432,7 @@ var finalReport;
 
 // scoring the test
 async function score() {
+  stopTime = 1;
   var finishTime = (document.getElementById("time").textContent);
   let myo = finishTime.replace(":", ".");
   console.log(Number(myo));
@@ -481,8 +487,6 @@ async function score() {
   var finalScore = ques1 + ques2 + ques3 + ques4 + ques5 + ques6;
   finalReport = finalScore;
 
-  document.getElementById("score").innerHTML = finalReport;
-
   $(currentQ).hide();
   $("#finish").hide();
   $("#backNext").hide();
@@ -492,7 +496,24 @@ async function score() {
   await delay(5000);
   $("#waiting2").hide();
   $("#scorePage").show();
+  animateValue(obj, 0, finalReport, 5000);
 }
+
+const obj = document.getElementById("score");
+
+function animateValue(obj, start, end, duration) {
+  let startTimestamp = null;
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    obj.innerHTML = Math.floor(progress * (end - start) + start);
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    }
+  };
+  window.requestAnimationFrame(step);
+}
+
 
 
 
