@@ -79,7 +79,7 @@ nav {
   height: 3px;
 }
 
-.dropdown-content {
+/* .dropdown-content {
   display: none;
   position: absolute;
   background-color: #1344e2;
@@ -94,7 +94,7 @@ nav {
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
+} */
 
 /* Footer  */
 footer {

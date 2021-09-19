@@ -435,7 +435,9 @@ async function score() {
   stopTime = 1;
   var finishTime = (document.getElementById("time").textContent);
   let myo = finishTime.replace(":", ".");
-  console.log(Number(myo));
+  var upTo = Number(myo);
+  var timeThrough = (6 - upTo);
+  console.log(timeThrough);
   // check score question 1
   var q1 = document.getElementById('q1D').checked;
   if(q1 == true) {
