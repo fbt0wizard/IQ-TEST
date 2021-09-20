@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100&display=swap');
 
 * {
     margin: 0;
@@ -8,7 +9,8 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Lato', sans-serif;
     background-color: #f1f1f1;
 }
 
@@ -48,6 +50,7 @@ body {
     background: #09206b;
     border-radius: 4px;
     color: #f1f1f1;
+    font-weight: bold;
 }
 
 .buttons {
@@ -198,6 +201,15 @@ body {
     margin-left: 2rem;
 }
 
+.score-container {
+    background-color: #fff;
+    width: max-content;
+    text-align: center;
+    padding: 3rem 23% 5rem 23%;
+    margin: 1.5rem auto;
+    border-radius: 4px;
+}
+
 @media screen and (max-width: 833px) {
     .buttons {
         margin-top: 0;
@@ -261,6 +273,26 @@ body {
     .answer2 {
         margin: -2rem auto;
         padding: 0 0 1rem 0;
+    }
+
+    .score-container {
+        padding: 1rem 15% 4rem 15%;
+        margin: 2rem auto 2rem auto;
+    }
+
+    
+}
+
+
+@media screen and (max-width: 375px) {
+    .score-container {
+        padding: 1rem 6% 4rem 6%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .score-container {
+        padding: 1rem 3% 4rem 3%;
     }
 }
 
