@@ -128,6 +128,19 @@ async function start() {
   var sliceArg1;
   var sliceArg2;
 async function next() {
+  if(randomQuestions.indexOf(currentQ) == 0) {
+    let back = document.getElementById('backBtn');
+    if(back.style.visibility = "hidden") {
+        back.style.visibility = "visible";
+    }
+  }
+
+  if(randomQuestions.indexOf(currentQ) == 3) {
+    let next = document.getElementById('nextBtn');
+    if(next.style.visibility = "visible") {
+        next.style.visibility = "hidden";
+    }
+  }
     if(clickedQ.includes(currentQ) == false) {
       move();
     }
