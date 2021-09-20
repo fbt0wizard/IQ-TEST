@@ -102,6 +102,10 @@ function getRandomQ() {
   
   //setting start button function
 async function start() {
+  let back = document.getElementById('backBtn');
+  if(back.style.visibility = "visible") {
+      back.style.visibility = "hidden";
+  }
     uncheck();
     getRandomQ();
     var firstTest = randomQuestions.slice(0, 1);
@@ -147,6 +151,19 @@ async function next() {
 }
 
 async function navNext() {
+  if(randomQuestions.indexOf(currentQ) == 0) {
+    let back = document.getElementById('backBtn');
+    if(back.style.visibility = "hidden") {
+        back.style.visibility = "visible";
+    }
+  }
+
+  if(randomQuestions.indexOf(currentQ) == 3) {
+    let next = document.getElementById('nextBtn');
+    if(next.style.visibility = "visible") {
+        next.style.visibility = "hidden";
+    }
+  }
   var ind = randomQuestions.indexOf(currentQ);
   sliceArg1 = ind + 1;
   sliceArg2 = ind + 2;
@@ -168,12 +185,24 @@ async function navNext() {
   var backSliceArg1;
   var backSliceArg2;
 async function back() {
+  if(randomQuestions.indexOf(currentQ) == 1) {
+    let back = document.getElementById('backBtn');
+    if(back.style.visibility = "visible") {
+        back.style.visibility = "hidden";
+    }
+  }
+
+  if(randomQuestions.indexOf(currentQ) != 3) {
+    let next = document.getElementById('nextBtn');
+    if(next.style.visibility = "hidden") {
+        next.style.visibility = "visible";
+    }
+  }
     var indBack = randomQuestions.indexOf(currentQ);
     backSliceArg1 = indBack - 1;
     backSliceArg2 = indBack;
     var newTest = randomQuestions.slice(backSliceArg1, backSliceArg2);
     if(newTest.length == 0){
-      alert("This is the first question");
       return;
     }
     $(currentQ).hide();
