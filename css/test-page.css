@@ -178,9 +178,15 @@ body {
     cursor: pointer;
     text-decoration: none;
     margin-bottom: 1rem;
+    background: linear-gradient(to right, #09206b 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .7s ease-out;
 }
 .action button:hover {
-    background: #09206b;
+    background-position: left bottom;
+    /* background: linear-gradient(90deg, rgba(12,51,133,1) 0%, rgba(9,9,121,1) 44%, rgba(0,212,255,1) 100%); */
+    /* background: #09206b; */
     color: #ddd;
 }
 
